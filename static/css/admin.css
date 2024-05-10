@@ -1,0 +1,80 @@
+body {
+  font-family: "Roboto";
+}
+.wtap {
+  display: inline-block;
+  margin-left: 470px;
+  margin-right: 200px;
+}
+.upload-btn {
+  color: #fff;
+  /* border: 1px solid #000; */
+  padding: 10px 20px;
+  border-radius: 0 10px 0 10px;
+  text-decoration: none;
+  position: relative;
+  left: -940px;
+  background-color: #28a745;
+}
+
+.upload-btn:hover {
+  color: #fff;
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+.container h1 {
+  border: 1px dashed #000;
+  /* display: inline-block; */
+  max-width: 300px;
+  padding: 5px 20px;
+  margin-left: 30px;
+}
+
+.view {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+a.view:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.delete-btn {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 0 10px;
+  background-color: #dc3545;
+}
+
+.delete-btn:hover {
+  color: #fff;
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+.cont {
+  border: 1px solid #000;
+  padding: 10px;
+  padding-bottom: 15px;
+  margin: 10px 0;
+  height: auto;
+}
+
+.edit-btn {
+  color: #212529;
+  text-decoration: none;
+  background-color: #ffc107;
+  padding: 10px 30px;
+  border-radius: 0 10px 0 10px;
+}
+
+.edit-btn:hover {
+  color: #212529;
+  background-color: #e0a800;
+  border-color: #d39e00;
+}

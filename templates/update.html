@@ -1,0 +1,15 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/update.css' %}" />
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+<title>Edit the data</title>
+{% block content %}
+<div class="container-edit">
+  <h1>Edit the data</h1>
+  <form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %} {{ form.as_p }}
+    <input type="submit" value="Save" class="btn-submit" />
+    <a href='{% url "admin" %}' class="btn btn-secondary">Cancel</a>
+  </form>
+</div>
+<script src="{% static "js/bootstrap.js" %}"></script>
+{% endblock content %}

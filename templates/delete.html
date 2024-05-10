@@ -1,0 +1,17 @@
+{% load static %}
+{% block content %}
+<title>Delete the post {{ message.title }}</title>
+<link rel="stylesheet" href='{% static "css/delete.css" %}'>
+<link  rel='stylesheet' href="{% static "css/bootstrap.css" %}">
+<div class="container-2">
+  <h1>Delete Message</h1>
+    <p>Are you sure you want to delete the message "{{ message.title }}"?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class='btn btn-danger'>Yes, delete</button>
+    </form>
+    <a href="{% url 'admin' %}" class="btn btn-secondary">Cancel</a>
+</div>
+{% endblock content %}
+
+<script src="{% static "js/bootstrap.js" %}"></script>

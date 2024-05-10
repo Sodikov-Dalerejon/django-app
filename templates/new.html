@@ -1,0 +1,16 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/new.css' %}" />
+<link rel='stylesheet' href="{% static "css/bootstrap.css" %}">
+<title>Text the news to the page</title>
+<div class="container">
+  <h1>Text the news to the page</h1>
+  {% block content %}
+  <form method="post" action="" enctype="multipart/form-data">
+    {% csrf_token %} {{ form.as_p }}
+    <button type="submit" class='btn-submit'>Save the new post</button>
+    <a href='{% url "admin" %}' class='btn btn-secondary'>Cancel</a>
+  </form>
+  {% endblock content %}
+</div>
+
+<script src="{% static "js/bootstrap.js" %}"></script>

@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="{% static "css/admin.css" %}">
+
+</head>
+<body>
+    <h1 class='wtap'>Welcome to admin Panel</h1>
+    <a href="{% url 'new' %}" class="upload-btn">Upload</a>
+    <a href='{% url "main" %}' class="view" target='_blank'>View the site</a>
+    {% block content %} {% csrf_token %} 
+    <div class="container">
+        {% for post in posts %}
+        <div class="cont">
+    <h1>{{ post.title }}</h1>
+    <p>{{ post.description | slice:":100" }}...</p>
+    <a href="{% url 'delete' post.pk %}" class="delete-btn">Delete</a>
+    <a href={% url "update" post.pk %} class='edit-btn'>Edit</a>
+        </div>
+    {% endfor %}</div> 
+    {% endblock content %} 
+    <script src="{% static "js/bootstrap.js" %}"></script>   
+</body>
+</html>
